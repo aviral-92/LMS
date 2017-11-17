@@ -22,7 +22,7 @@ public class Inventory {
 	private Integer inventoryId;
 
 	@Column(name = "BK_ID", nullable = false)
-	private Integer bk_Id;
+	private Integer bkId;
 
 	@Column(name = "BOOK_COUNT", nullable = false)
 	private int bookCount;
@@ -44,22 +44,22 @@ public class Inventory {
 		super();
 	}
 
-	public Inventory(Integer inventoryId, Integer bk_Id, Integer bookCount, String addedBy, Date addedDate,
+	public Inventory(Integer inventoryId, Integer bkId, Integer bookCount, String addedBy, Date addedDate,
 			String status) {
 		super();
 		this.inventoryId = inventoryId;
-		this.bk_Id = bk_Id;
+		this.bkId = bkId;
 		this.bookCount = bookCount;
 		this.addedBy = addedBy;
 		this.addedDate = addedDate;
 		this.status = status;
 	}
 
-	public Inventory(Integer inventoryId, Integer bk_Id, Integer bookCount, String addedBy, Date addedDate,
+	public Inventory(Integer inventoryId, Integer bkId, Integer bookCount, String addedBy, Date addedDate,
 			String status, Book book) {
 		super();
 		this.inventoryId = inventoryId;
-		this.bk_Id = bk_Id;
+		this.bkId = bkId;
 		this.bookCount = bookCount;
 		this.addedBy = addedBy;
 		this.addedDate = addedDate;
@@ -75,12 +75,12 @@ public class Inventory {
 		this.inventoryId = inventoryId;
 	}
 
-	public Integer getBk_Id() {
-		return bk_Id;
+	public Integer getBkId() {
+		return bkId;
 	}
 
-	public void setBk_Id(Integer bk_Id) {
-		this.bk_Id = bk_Id;
+	public void setBkId(Integer bkId) {
+		this.bkId = bkId;
 	}
 
 	public String getAddedBy() {

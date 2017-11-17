@@ -24,13 +24,13 @@ public class Issue {
 	private Integer issueId;
 
 	@Column(name = "BK_ID", nullable = false)
-	private Integer book_Id;
+	private Integer bookId;
 
 	@Column(name = "T_ID")
-	private Integer teacher_Id;
+	private Integer teacherId;
 
 	@Column(name = "S_ID")
-	private Integer student_Id;
+	private Integer studentId;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "ISSUE_BOOK_DATE", columnDefinition = "DATETIME", nullable = false)
@@ -58,13 +58,13 @@ public class Issue {
 		super();
 	}
 
-	public Issue(Integer issueId, Integer book_Id, Integer teacher_Id, Integer student_Id, Date issueDate,
+	public Issue(Integer issueId, Integer bookId, Integer teacherId, Integer studentId, Date issueDate,
 			Date returnDate, String status, Book book, Student student, Teacher teacher) {
 		super();
 		this.issueId = issueId;
-		this.book_Id = book_Id;
-		this.teacher_Id = teacher_Id;
-		this.student_Id = student_Id;
+		this.bookId = bookId;
+		this.teacherId = teacherId;
+		this.studentId = studentId;
 		this.issueDate = issueDate;
 		this.returnDate = returnDate;
 		this.status = status;
@@ -81,28 +81,28 @@ public class Issue {
 		this.issueId = issueId;
 	}
 
-	public Integer getBook_Id() {
-		return book_Id;
+	public Integer getBookId() {
+		return bookId;
 	}
 
-	public void setBook_Id(Integer book_Id) {
-		this.book_Id = book_Id;
+	public void setBookId(Integer bookId) {
+		this.bookId = bookId;
 	}
 
-	public Integer getTeacher_Id() {
-		return teacher_Id;
+	public Integer getTeacherId() {
+		return teacherId;
 	}
 
-	public void setTeacher_Id(Integer teacher_Id) {
-		this.teacher_Id = teacher_Id;
+	public void setTeacherId(Integer teacherId) {
+		this.teacherId = teacherId;
 	}
 
 	public Integer getStudent_Id() {
-		return student_Id;
+		return studentId;
 	}
 
-	public void setStudent_Id(Integer student_Id) {
-		this.student_Id = student_Id;
+	public void setStudentId(Integer studentId) {
+		this.studentId = studentId;
 	}
 
 	public Date getIssueDate() {
