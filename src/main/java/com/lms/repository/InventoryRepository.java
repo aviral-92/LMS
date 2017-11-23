@@ -8,7 +8,7 @@ public interface InventoryRepository extends CrudRepository<Inventory, Integer> 
 
 	public Inventory findByInventoryId(Integer inventoryId);
 
-	public Inventory findByBk_Id(Integer bookId);
+	public Inventory findByBkId(Integer bookId);
 
 	public java.util.List<Inventory> findByBookName(String bookName);
 }

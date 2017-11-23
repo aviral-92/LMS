@@ -6,7 +6,7 @@ import com.lms.entity.Issue;
 
 public interface IssueRepository extends CrudRepository<Issue, Integer> {
 
-	public java.util.List<Issue> findByStudent_Id(Integer studentId);
+	public java.util.List<Issue> findByStudentId(Integer studentId);
 
-	public java.util.List<Issue> findByTeacher_Id(Integer teacherId);
+	public java.util.List<Issue> findByTeacherId(Integer teacherId);
 }

@@ -31,7 +31,7 @@ public class BookService {
 					if (!StringUtils.isEmpty(books)) {
 
 						Inventory inv = inventoryService.addBookInventory(
-								inventoryRepository.findByBk_Id(books.getBookId()), LoginTypeEnum.LIBRARIAN.name());
+								inventoryRepository.findByBkId(books.getBookId()), LoginTypeEnum.LIBRARIAN.name());
 						if (!StringUtils.isEmpty(inv)) {
 							response = "Book added successfully...!!!";
 						} else {

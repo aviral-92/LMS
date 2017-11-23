@@ -48,8 +48,8 @@ public class IssueService {
 		if (!StringUtils.isEmpty(issueBook)) {
 			returnBook = new Issue();
 			returnBook.setIssueId(issueBook.getIssueId());
-			returnBook.setStudent_Id(issueBook.getStudent_Id());
-			returnBook.setTeacher_Id(issueBook.getTeacher_Id());
+			returnBook.setStudentId(issueBook.getStudentId());
+			returnBook.setTeacherId(issueBook.getTeacherId());
 			returnBook.setIssueDate(new Date());
 			if (returnBy.equals(LoginTypeEnum.LIBRARIAN.name()) || returnBy.equals(LoginTypeEnum.ADMIN.name())) {
 				returnBook.setStatus(IssueTypeEnum.RETURNED.name());

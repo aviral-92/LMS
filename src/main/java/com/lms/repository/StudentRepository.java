@@ -8,5 +8,5 @@ public interface StudentRepository extends CrudRepository<Student, Integer> {
 
 	public Student findByStudentIdAndStudentAddress(Integer studentId, String address);
 	
-	public Student findByUsername(String username);
+	public Student findByStudentUsername(String username);
 }

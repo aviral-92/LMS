@@ -97,7 +97,7 @@ public class Issue {
 		this.teacherId = teacherId;
 	}
 
-	public Integer getStudent_Id() {
+	public Integer getStudentId() {
 		return studentId;
 	}
 

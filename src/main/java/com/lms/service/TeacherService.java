@@ -14,7 +14,7 @@ public class TeacherService extends AbstractService {
 
 		boolean isUsernameExist = false;
 		if (!StringUtils.isEmpty(username)) {
-			Teacher student = teacherRepository.findByUsername(username);
+			Teacher student = teacherRepository.findByTeacherUsername(username);
 			if (!StringUtils.isEmpty(student) && !StringUtils.isEmpty(student.getTeacherUsername())) {
 				isUsernameExist = true;
 			}

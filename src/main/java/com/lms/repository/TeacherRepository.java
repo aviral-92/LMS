@@ -6,6 +6,6 @@ import com.lms.entity.Teacher;
 
 public interface TeacherRepository extends CrudRepository<Teacher, Integer> {
 
-	public Teacher findByUsername(String username);
+	public Teacher findByTeacherUsername(String username);
 
 }

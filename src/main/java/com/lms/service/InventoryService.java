@@ -23,9 +23,9 @@ public class InventoryService {
 		Inventory inventory = null;
 		if (!StringUtils.isEmpty(inv) && !StringUtils.isEmpty(addedBy)) {
 			if (addedBy.equals(LoginTypeEnum.ADMIN) || addedBy.equals(LoginTypeEnum.LIBRARIAN)) {
-				Inventory inventorys = inventoryRepository.findByBk_Id(inv.getBk_Id());
+				Inventory inventorys = inventoryRepository.findByBkId(inv.getBkId());
 				if (!StringUtils.isEmpty(inventorys)) {
-					inventory = new Inventory(inventorys.getInventoryId(), inventorys.getBk_Id(),
+					inventory = new Inventory(inventorys.getInventoryId(), inventorys.getBkId(),
 							inventorys.getBookCount(), addedBy, new Date(), InventoryTypeEnum.AVAILABLE.name());
 					return inventoryRepository.save(inventory);
 				} else {
@@ -39,8 +39,8 @@ public class InventoryService {
 	public Inventory bookCountOperation(Issue issue, boolean issued) {
 
 		Inventory tempInventory = null, inv = null;
-		if (!StringUtils.isEmpty(issue) && !StringUtils.isEmpty(issue.getBook_Id())) {
-			Inventory inventory = inventoryRepository.findByBk_Id(issue.getBook_Id());
+		if (!StringUtils.isEmpty(issue) && !StringUtils.isEmpty(issue.getBookId())) {
+			Inventory inventory = inventoryRepository.findByBkId(issue.getBookId());
 			tempInventory = new Inventory();
 			// If book got issued...
 			if (issued) {
@@ -71,8 +71,8 @@ public class InventoryService {
 	public boolean isBookAvalableInInventory(Issue issue) {
 
 		boolean isExist = false;
-		if (!StringUtils.isEmpty(issue) && !StringUtils.isEmpty(issue.getBook_Id())) {
-			Inventory inventory = inventoryRepository.findByBk_Id(issue.getBook_Id());
+		if (!StringUtils.isEmpty(issue) && !StringUtils.isEmpty(issue.getBookId())) {
+			Inventory inventory = inventoryRepository.findByBkId(issue.getBookId());
 			if (!StringUtils.isEmpty(inventory) && inventory.getBookCount() > 0) {
 				isExist = true;
 			}
